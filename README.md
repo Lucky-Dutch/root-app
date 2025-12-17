@@ -18,7 +18,11 @@ Po uruchomieniu phoenix_app w przeglądarce:
 ### Korzystanie z aplikacji
 
 `http://localhost:8000/users` - index userów
+
 `http://localhost:8000/users/add` - new user
+
 `http://localhost:8000/users/#{id}` - show user
+
 `http://localhost:8000/users/#{id}/edit` - edit user
+
 `http://localhost:8000/users/#{id}/delete` - delete user
