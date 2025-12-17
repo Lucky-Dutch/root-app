@@ -10,6 +10,8 @@ defmodule PhoenixApi.Users.User do
   end
 
   def changeset(user, attrs) do
-    Ecto.Changeset.cast(user, attrs, [:first_name, :last_name, :gender, :birthdate])
+    user
+    |> Ecto.Changeset.cast(attrs, [:first_name, :last_name, :gender, :birthdate])
+    |> Ecto.Changeset.validate_required([:first_name, :last_name, :gender, :birthdate])
   end
 end
