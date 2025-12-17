@@ -9,8 +9,7 @@ Uruchomienie phoenix_api
 Uruchomienie symphony_app
 1. cd symphony_app
 2. composer install
-3. php -S loclhost:8000 -t public
-
+3. php -S localhost:8000 -t public
 
 ### Inicjacja danych 
 Po uruchomieniu phoenix_app w przeglądarce:
