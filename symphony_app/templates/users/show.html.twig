@@ -100,36 +100,40 @@
 <body>
     <div class="container">
         <h1>Szczegóły użytkownika</h1>
-
+     {% if user %}
         <div class="actions" style="margin-bottom: 18px;">
             <a href="/users">Powrót do listy</a>
             <a href="/users/{{ user.id }}/edit">Edytuj</a>
         </div>
-
-        <table>
-            <tbody>
-                <tr>
-                    <th>ID</th>
-                    <td>{{ user.id }}</td>
-                </tr>
-                <tr>
-                    <th>Imię</th>
-                    <td>{{ user.first_name }}</td>
-                </tr>
-                <tr>
-                    <th>Nazwisko</th>
-                    <td>{{ user.last_name }}</td>
-                </tr>
-                <tr>
-                    <th>Płeć</th>
-                    <td>{{ user.gender }}</td>
-                </tr>
-                <tr>
-                    <th>Data urodzenia</th>
-                    <td>{{ user.birthdate }}</td>
-                </tr>
-            </tbody>
-        </table>
+   
+          <table>
+              <tbody>
+                  <tr>
+                      <th>ID</th>
+                      <td>{{ user.id }}</td>
+                  </tr>
+                  <tr>
+                      <th>Imię</th>
+                      <td>{{ user.first_name }}</td>
+                  </tr>
+                  <tr>
+                      <th>Nazwisko</th>
+                      <td>{{ user.last_name }}</td>
+                  </tr>
+                  <tr>
+                      <th>Płeć</th>
+                      <td>{{ user.gender }}</td>
+                  </tr>
+                  <tr>
+                      <th>Data urodzenia</th>
+                      <td>{{ user.birthdate }}</td>
+                  </tr>
+              </tbody>
+          </table>
+        {% else %}
+          <h2>Użytkownik nie istnieje</h2>
+          <a href="/users">Powrót do listy</a>
+        {% endif %}
     </div>
 </body>
 </html>

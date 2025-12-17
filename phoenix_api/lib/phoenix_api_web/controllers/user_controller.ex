@@ -22,24 +22,35 @@ defmodule PhoenixApiWeb.UserController do
   end
 
   def create(conn, params) do
-    {:ok, user} = Users.create_user(params)
+    case Users.create_user(params) do
+      {:ok, _user} ->
+        conn
+        |> put_status(:ok)
+        |> json(%{message: "User created successfully!"})
 
-    conn
-    |> put_status(:ok)
-    |> json(%{message: "User created successfully!"})
+      {:error, changeset} ->
+        conn
+        |> put_status(:bad_request)
+        |> json(%{error: "Failed to create user", details: changeset.errors})
+        |> halt()
+    end
   end
 
   def update(conn, params) do
-    user =
-      User
-      |> Repo.get(params["id"])
-      |> User.changeset(params)
+    user = Users.get_user(params["id"])
 
-    {:ok, user} = Repo.update(user)
+    case Users.update_user(user, params) do
+      {:ok, user} ->
+        conn
+        |> put_status(:ok)
+        |> json(%{user: user})
 
-    conn
-    |> put_status(:ok)
-    |> json(%{user: user})
+      {:error, changeset} ->
+        conn
+        |> put_status(:bad_request)
+        |> json(%{error: "Failed to update user", details: changeset.errors})
+        |> halt()
+    end
   end
 
   def delete(conn, %{"id" => id}) do
