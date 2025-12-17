@@ -1,0 +1,12 @@
+parameters:
+    kernel.secret: 'change_this_secret_key'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Tests,Kernel.php}'

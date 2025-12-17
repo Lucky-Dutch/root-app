@@ -1,0 +1,440 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* users/add.html.twig */
+class __TwigTemplate_a60ca2d82045b636966bd4be8e736538 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "users/add.html.twig"));
+
+        // line 1
+        yield "<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\"UTF-8\">
+    <title>Dodaj użytkownika</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f7f8fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 8px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            padding: 32px 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        th, td {
+            padding: 14px 12px;
+            text-align: left;
+        }
+        th {
+            background: #f1f5f9;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e5e7eb;
+            width: 30%;
+        }
+        tr {
+            transition: background 0.15s;
+        }
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        tr:hover {
+            background: #e0e7ef;
+        }
+
+        input[type=\"text\"],
+        input[type=\"date\"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.98em;
+            background: #fff;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        input[type=\"text\"]:focus,
+        input[type=\"date\"]:focus,
+        select:focus {
+            border-color: #93c5fd;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+        }
+
+        .actions a, .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+        .actions a {
+            background: #f1f5f9;
+            color: #2563eb;
+        }
+        .actions a:hover {
+            background: #dbeafe;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #1e40af;
+        }
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #111827;
+            text-decoration: none;
+        }
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        @media (max-width: 700px) {
+            .container { padding: 10px 2px; }
+            table, thead, tbody, th, td, tr { display: block; }
+            th, td { padding: 10px 6px; }
+            tr { margin-bottom: 12px; }
+            th { background: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class=\"container\">
+        <h1>Dodaj użytkownika</h1>
+
+        <div class=\"actions\" style=\"margin-bottom: 18px;\">
+            <a href=\"/users\">Powrót do listy</a>
+        </div>
+
+        <form action=\"/users/add\" method=\"post\">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Imię</th>
+                        <td>
+                            <input type=\"text\" name=\"first_name\" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nazwisko</th>
+                        <td>
+                            <input type=\"text\" name=\"last_name\" required>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <th>Płeć</th>
+                        <td>
+                            <div style=\"display:flex; gap:16px; align-items:center;\">
+                                <label style=\"display:flex; gap:8px; align-items:center;\">
+                                    <input type=\"radio\" name=\"gender\" value=\"female\" checked>
+                                    <span>Kobieta</span>
+                                </label>
+                                <label style=\"display:flex; gap:8px; align-items:center;\">
+                                    <input type=\"radio\" name=\"gender\" value=\"male\">
+                                    <span>Mężczyzna</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <th>Data urodzenia</th>
+                      <td>
+                          <input type=\"date\" name=\"birthdate\">
+                      </td>
+                  </tr>
+                </tbody>
+            </table>
+
+            <div style=\"margin-top: 18px; display: flex; gap: 8px;\">
+                <button type=\"submit\" class=\"btn btn-primary\">Zapisz</button>
+                <a href=\"/users\" class=\"btn btn-secondary\">Anuluj</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "users/add.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  45 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\"UTF-8\">
+    <title>Dodaj użytkownika</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f7f8fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 8px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            padding: 32px 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        }
+        th, td {
+            padding: 14px 12px;
+            text-align: left;
+        }
+        th {
+            background: #f1f5f9;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e5e7eb;
+            width: 30%;
+        }
+        tr {
+            transition: background 0.15s;
+        }
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        tr:hover {
+            background: #e0e7ef;
+        }
+
+        input[type=\"text\"],
+        input[type=\"date\"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 0.98em;
+            background: #fff;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        input[type=\"text\"]:focus,
+        input[type=\"date\"]:focus,
+        select:focus {
+            border-color: #93c5fd;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+        }
+
+        .actions a, .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+        .actions a {
+            background: #f1f5f9;
+            color: #2563eb;
+        }
+        .actions a:hover {
+            background: #dbeafe;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #1e40af;
+        }
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #111827;
+            text-decoration: none;
+        }
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        @media (max-width: 700px) {
+            .container { padding: 10px 2px; }
+            table, thead, tbody, th, td, tr { display: block; }
+            th, td { padding: 10px 6px; }
+            tr { margin-bottom: 12px; }
+            th { background: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class=\"container\">
+        <h1>Dodaj użytkownika</h1>
+
+        <div class=\"actions\" style=\"margin-bottom: 18px;\">
+            <a href=\"/users\">Powrót do listy</a>
+        </div>
+
+        <form action=\"/users/add\" method=\"post\">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Imię</th>
+                        <td>
+                            <input type=\"text\" name=\"first_name\" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nazwisko</th>
+                        <td>
+                            <input type=\"text\" name=\"last_name\" required>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <th>Płeć</th>
+                        <td>
+                            <div style=\"display:flex; gap:16px; align-items:center;\">
+                                <label style=\"display:flex; gap:8px; align-items:center;\">
+                                    <input type=\"radio\" name=\"gender\" value=\"female\" checked>
+                                    <span>Kobieta</span>
+                                </label>
+                                <label style=\"display:flex; gap:8px; align-items:center;\">
+                                    <input type=\"radio\" name=\"gender\" value=\"male\">
+                                    <span>Mężczyzna</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <th>Data urodzenia</th>
+                      <td>
+                          <input type=\"date\" name=\"birthdate\">
+                      </td>
+                  </tr>
+                </tbody>
+            </table>
+
+            <div style=\"margin-top: 18px; display: flex; gap: 8px;\">
+                <button type=\"submit\" class=\"btn btn-primary\">Zapisz</button>
+                <a href=\"/users\" class=\"btn btn-secondary\">Anuluj</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>", "users/add.html.twig", "/Users/lukaszdacz/projekty/elixir/project-root/symphony_app/templates/users/add.html.twig");
+    }
+}
