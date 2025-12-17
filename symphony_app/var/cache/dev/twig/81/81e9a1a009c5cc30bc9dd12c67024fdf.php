@@ -174,44 +174,47 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
 <body>
     <div class=\"container\">
         <h1>Edycja użytkownika</h1>
-
-        <div class=\"actions\" style=\"margin-bottom: 18px;\">
+      ";
+        // line 133
+        if ((($tmp = (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 133, $this->source); })())) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+            // line 134
+            yield "        <div class=\"actions\" style=\"margin-bottom: 18px;\">
             <a href=\"/users\">Powrót do listy</a>
             <a href=\"/users/";
-        // line 136
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 136, $this->source); })()), "id", [], "any", false, false, false, 136), "html", null, true);
-        yield "\">Podgląd</a>
+            // line 136
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 136, $this->source); })()), "id", [], "any", false, false, false, 136), "html", null, true);
+            yield "\">Podgląd</a>
         </div>
 
         <form action=\"/users/";
-        // line 139
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 139, $this->source); })()), "id", [], "any", false, false, false, 139), "html", null, true);
-        yield "/edit\" method=\"post\">
+            // line 139
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 139, $this->source); })()), "id", [], "any", false, false, false, 139), "html", null, true);
+            yield "/edit\" method=\"post\">
             <table>
                 <tbody>
                     <tr>
                         <th>ID</th>
                         <td>";
-        // line 144
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 144, $this->source); })()), "id", [], "any", false, false, false, 144), "html", null, true);
-        yield "</td>
+            // line 144
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 144, $this->source); })()), "id", [], "any", false, false, false, 144), "html", null, true);
+            yield "</td>
                     </tr>
                     <tr>
                         <th>Imię</th>
                         <td>
                             <input type=\"text\" name=\"first_name\" value=\"";
-        // line 149
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 149, $this->source); })()), "first_name", [], "any", false, false, false, 149), "html", null, true);
-        yield "\" required>
+            // line 149
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 149, $this->source); })()), "first_name", [], "any", false, false, false, 149), "html", null, true);
+            yield "\" required>
                         </td>
                     </tr>
                     <tr>
                         <th>Nazwisko</th>
                         <td>
                             <input type=\"text\" name=\"last_name\" value=\"";
-        // line 155
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 155, $this->source); })()), "last_name", [], "any", false, false, false, 155), "html", null, true);
-        yield "\" required>
+            // line 155
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 155, $this->source); })()), "last_name", [], "any", false, false, false, 155), "html", null, true);
+            yield "\" required>
                         </td>
                     </tr>
  
@@ -221,16 +224,16 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
                             <div style=\"display:flex; gap:16px; align-items:center;\">
                                 <label style=\"display:flex; gap:8px; align-items:center;\">
                                     <input type=\"radio\" name=\"gender\" value=\"female\" ";
-        // line 164
-        yield (((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 164, $this->source); })()), "gender", [], "any", false, false, false, 164) == "female")) ? ("checked") : (""));
-        yield ">
+            // line 164
+            yield (((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 164, $this->source); })()), "gender", [], "any", false, false, false, 164) == "female")) ? ("checked") : (""));
+            yield ">
                                     <span>Kobieta</span>
                                 </label>
                                 <label style=\"display:flex; gap:8px; align-items:center;\">
                                     <input type=\"radio\" name=\"gender\" value=\"male\" ";
-        // line 168
-        yield (((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 168, $this->source); })()), "gender", [], "any", false, false, false, 168) == "male")) ? ("checked") : (""));
-        yield ">
+            // line 168
+            yield (((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 168, $this->source); })()), "gender", [], "any", false, false, false, 168) == "male")) ? ("checked") : (""));
+            yield ">
                                     <span>Mężczyzna</span>
                                 </label>
                             </div>
@@ -240,9 +243,9 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
                     <th>Data urodzenia</th>
                       <td>
                           <input type=\"date\" name=\"birthdate\" value=\"";
-        // line 177
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 177, $this->source); })()), "birthdate", [], "any", false, false, false, 177), "html", null, true);
-        yield "\">
+            // line 177
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 177, $this->source); })()), "birthdate", [], "any", false, false, false, 177), "html", null, true);
+            yield "\">
                       </td>
                   </tr>
                 </tbody>
@@ -251,12 +254,20 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
             <div style=\"margin-top: 18px; display: flex; gap: 8px;\">
                 <button type=\"submit\" class=\"btn btn-primary\">Zapisz zmiany</button>
                 <a href=\"/users/";
-        // line 185
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 185, $this->source); })()), "id", [], "any", false, false, false, 185), "html", null, true);
-        yield "\" class=\"btn btn-secondary\">Anuluj</a>
+            // line 185
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 185, $this->source); })()), "id", [], "any", false, false, false, 185), "html", null, true);
+            yield "\" class=\"btn btn-secondary\">Anuluj</a>
             </div>
         </form>
-    </div>
+      ";
+        } else {
+            // line 189
+            yield "        <h2>Użytkownik nie istnieje</h2>
+        <a href=\"/users\">Powrót do listy</a>
+      ";
+        }
+        // line 192
+        yield "    </div>
 </body>
 </html>";
         
@@ -286,7 +297,7 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  255 => 185,  244 => 177,  232 => 168,  225 => 164,  213 => 155,  204 => 149,  196 => 144,  188 => 139,  182 => 136,  45 => 1,);
+        return array (  270 => 192,  265 => 189,  258 => 185,  247 => 177,  235 => 168,  228 => 164,  216 => 155,  207 => 149,  199 => 144,  191 => 139,  185 => 136,  181 => 134,  179 => 133,  45 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -423,7 +434,7 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
 <body>
     <div class=\"container\">
         <h1>Edycja użytkownika</h1>
-
+      {% if user %}
         <div class=\"actions\" style=\"margin-bottom: 18px;\">
             <a href=\"/users\">Powrót do listy</a>
             <a href=\"/users/{{ user.id }}\">Podgląd</a>
@@ -478,6 +489,10 @@ class __TwigTemplate_8bb68087719f8fee5cdd883fb0f4699e extends Template
                 <a href=\"/users/{{ user.id }}\" class=\"btn btn-secondary\">Anuluj</a>
             </div>
         </form>
+      {% else %}
+        <h2>Użytkownik nie istnieje</h2>
+        <a href=\"/users\">Powrót do listy</a>
+      {% endif %}
     </div>
 </body>
 </html>", "users/edit.html.twig", "/Users/lukaszdacz/projekty/elixir/project-root/symphony_app/templates/users/edit.html.twig");
